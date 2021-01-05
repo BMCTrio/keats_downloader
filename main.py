@@ -16,8 +16,8 @@ def login():
 	driver = webdriver.Chrome(executable_path="selenium/chromedriver.exe", chrome_options=options)
 
 	driver.get("https://keats.kcl.ac.uk/")
-
-	WebDriverWait(driver, 9999).until(EC.url_matches("https://keats.kcl.ac.uk/"))
+	time.sleep(1)
+	WebDriverWait(driver, 9999).until(EC.url_matches("https://keats.kcl.ac.uk/my"))
 
 	driver.quit()
 
